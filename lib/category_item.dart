@@ -22,6 +22,9 @@ class CategoryItem extends StatelessWidget {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
+        borderRadius: BorderRadius.all(
+          Radius.circular(15),
+        ),
       ),
     );
   }
