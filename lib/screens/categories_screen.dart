@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'category_item.dart';
+import '../widgets/category_item.dart';
 
-import './models/dummy_data.dart';
+import '../models/dummy_data.dart';
 
 class CategoriesScreen extends StatelessWidget {
   static const routeName = 'home';
