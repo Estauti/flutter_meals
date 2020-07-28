@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 
 import '../widgets/main_drawer.dart';
 
-class FavoritesScreen extends StatelessWidget {
+class FiltersScreen extends StatelessWidget {
+  static const routeName = 'favorites';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Your Favorite'),
+        title: Text('Filters'),
       ),
       drawer: MainDrawer(),
       body: Center(
-        child: Text('Your favorites meals...'),
+        child: Text('Filters...'),
       ),
     );
   }
