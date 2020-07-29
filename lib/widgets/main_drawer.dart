@@ -47,12 +47,14 @@ class MainDrawer extends StatelessWidget {
           buildDrawerItem(
             'Meals',
             Icons.restaurant,
-            () => Navigator.of(context).pushNamed(CategoriesScreen.routeName),
+            () => Navigator.of(context)
+                .pushReplacementNamed(CategoriesScreen.routeName),
           ),
           buildDrawerItem(
             'Filters',
             Icons.settings,
-            () => Navigator.of(context).pushNamed(FiltersScreen.routeName),
+            () => Navigator.of(context)
+                .pushReplacementNamed(FiltersScreen.routeName),
           ),
         ],
       ),
