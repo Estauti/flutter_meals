@@ -4,6 +4,10 @@ import '../models/dummy_data.dart';
 
 class MealDetailsScreen extends StatelessWidget {
   static const routeName = 'mealDetails';
+  final Function toggleFavorite;
+  final Function isFavorite;
+
+  MealDetailsScreen(this.toggleFavorite, this.isFavorite);
 
   Widget buildScrollableContainer(BuildContext context, Widget child) {
     return Container(
@@ -27,6 +31,10 @@ class MealDetailsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(meal.title),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(isFavorite(mealId) ? Icons.star : Icons.star_border),
+        onPressed: () => toggleFavorite(mealId),
       ),
       body: SingleChildScrollView(
         child: Column(
